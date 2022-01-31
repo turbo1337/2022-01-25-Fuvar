@@ -37,6 +37,22 @@ namespace _2022_01_25_Fuvar
 
             Console.WriteLine("6. feladat: {0} km", Math.Round(osszeskm, 2));
 
+            int max = adatok[0].Idotartam;
+            int maxi = 0;
+            for (i = 0; i < adatokszama; i++)
+                if (adatok[i].Idotartam > max)
+                {
+                    max = adatok[i].Idotartam;
+                    maxi = i;
+                }
+            Console.WriteLine("7. feladat: Leghosszabb fuvar:");
+            Console.WriteLine("\tFuvar hossza: {0} másodperc", max);
+            Console.WriteLine("\tTaxi azonosító: {0}", adatok[maxi].Taxi_id);
+            Console.WriteLine("\tMegtett távolság: {0} km", adatok[maxi].Tavolsag * 1.6);
+            Console.WriteLine("\tViteldíj: {0} $", adatok[maxi].Viteldij +
+           adatok[maxi].Borravalo);
+
+
             Console.ReadKey();
 
         }
