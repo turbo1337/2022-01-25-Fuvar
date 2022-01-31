@@ -35,6 +35,8 @@ namespace _2022_01_25_Fuvar
             adatok.GroupBy(x => x.Fizetesimod).ToList().ForEach(x =>
            Console.WriteLine("\t{0}: {1} fuvar", x.Key, x.Count()));
 
+            Console.WriteLine("6. feladat: {0} km", Math.Round(osszeskm, 2));
+
             Console.ReadKey();
 
         }
