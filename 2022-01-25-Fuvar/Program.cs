@@ -32,6 +32,12 @@ namespace _2022_01_25_Fuvar
             Console.WriteLine($"4.feladat: {db} fuvar alatt {bevetel} $");
 
             Console.WriteLine("5. feladat:");
+            int bankkartya = 0;
+            int keszpenz = 0;
+            foreach (var f in fuvarok)
+            {
+                if (f.Fizetesmod== "bankkartya")
+            }
             adatok.GroupBy(x => x.Fizetesimod).ToList().ForEach(x =>
            Console.WriteLine("\t{0}: {1} fuvar", x.Key, x.Count()));
 
