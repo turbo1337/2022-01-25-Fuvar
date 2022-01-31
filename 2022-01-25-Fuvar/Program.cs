@@ -26,10 +26,14 @@ namespace _2022_01_25_Fuvar
                 if (f.TaxiID==6185)
                 {
                     db++;
-                    bevétel += f.Viteldij + f.Borravalo;
+                    bevetel += f.Viteldij + f.Borravalo;
                 }
             }
             Console.WriteLine($"4.feladat: {db} fuvar alatt {bevetel} $");
+
+            Console.WriteLine("5. feladat:");
+            adatok.GroupBy(x => x.Fizetesimod).ToList().ForEach(x =>
+           Console.WriteLine("\t{0}: {1} fuvar", x.Key, x.Count()));
 
             Console.ReadKey();
 
